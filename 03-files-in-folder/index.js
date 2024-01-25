@@ -13,7 +13,7 @@ const secretFolder = path.resolve(__dirname, 'secret-folder');
         const fileSize = (stats.size / 1024).toFixed(3) + 'kb';
 
         console.log(
-          `${file.name}-${path.extname(file.name)} - ${fileSize}`,
+          `${(file.name).replace(path.extname(file.name), '')} - ${path.extname(file.name).replace('.', '')} - ${fileSize}`,
         );
       }
     }
